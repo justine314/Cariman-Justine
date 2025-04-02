@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justine Shene Cariman - Favorites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="combined.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Justine Shene Cariman</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="favorites.html">Favorites</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <section id="home" class="section homepage hidden">
+            <div class="slideshow-container">
+                <div class="slide">
+                    <img src="images/aa.jpg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="images/bb.jpg" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="images/cc.jpg" alt="Slide 3">
+                </div>
+            </div>
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+            <div class="content">
+                <h1>Hi, I'm Justine Shene Cariman</h1>
+                <p class="tagline">BSIT-2A ALGORITHM</p>
+                <p class="description">
+                    I'm Justine Shene Cariman, a BSIT-2A student who has a strong interest in software development and algorithms. My area of expertise is developing effective, approachable digital solutions to address practical issues. I'm committed to creating cutting-edge applications that have an impact, and I have a solid background in programming and an excellent eye for detail.
+                </p>
+                <div class="about-me">
+                    <div class="about-me-container">
+                        <h2>About Me</h2>
+                        <p>
+                            I’m a passionate and driven individual who loves exploring the world of technology and creativity. When I’m not coding, you can find me indulging in my hobbies or spending time with friends and family.
+                        </p>
+                        <div class="details">
+                            <p><span>Age:</span> 20</p>
+                            <p><span>Location:</span> Philippines</p>
+                            <p><span>Hobbies:</span> Watching movies, Playing Online Games, Dancing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" class="section hidden">
+            <h2>Portfolio</h2>
+            <div class="portfolio-slider">
+                <div class="portfolio-item">
+                    <div class="front">
+                        <div class="icon">🌡️</div>
+                        <h3>Temperature Converter</h3>
+                    </div>
+                    <div class="back">
+                        <p>Convert between Celsius and Fahrenheit with ease.</p>
+                        <button onclick="temperatureConverter()">Try It (5 pts)</button>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="front">
+                        <div class="icon">📏</div>
+                        <h3>The Longer Word</h3>
+                    </div>
+                    <div class="back">
+                        <p>Compare two words and find the longer one.</p>
+                        <button onclick="getLongerWord()">Try It (5 pts)</button>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="front">
+                        <div class="icon">💎</div>
+                        <h3>Know My Birthstone</h3>
+                    </div>
+                    <div class="back">
+                        <p>Discover your birthstone based on your birth month.</p>
+                        <button onclick="knowMyBirthstone()">Try It (7 pts)</button>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="front">
+                        <div class="icon">➕</div>
+                        <h3>Basic Operators</h3>
+                    </div>
+                    <div class="back">
+                        <p>Perform basic arithmetic operations on two numbers.</p>
+                        <button onclick="basicOperators()">Try It (7 pts)</button>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="front">
+                        <div class="icon">🚀</div>
+                        <h3>Compute for Acceleration</h3>
+                    </div>
+                    <div class="back">
+                        <p>Calculate acceleration using velocity and time.</p>
+                        <button onclick="computeAcceleration()">Try It (8 pts)</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="favorites" class="section">
+            <h2 id="gallery-header">Abstract Art Gallery</h2>
+            <div id="art-exhibit">
+                <div class="artwork-row">
+                    <div class="artwork-container">
+                        <div class="artwork">
+                            <img src="C:\Users\Justine\Documents\Cariman_PersonalWeb\photos\ems.jpg" alt="Art 1">
+                            <div class="heart1" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                    <div class="artwork-container">
+                        <div class="artwork">
+                            <img src="C:\Users\Justine\Documents\Cariman_PersonalWeb\photos\mybb.jpg" alt="Art 2">
+                            <div class="heart1" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-row">
+                    <div class="comment-section">
+                        <div class="caption">
+                            <span class="boldy">Art 1</span><br>Me
+                        </div>
+                        <div class="comment-box">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button class="comment-button" onclick="addComment(this, 'comments-list-1')">Post</button>
+                        </div>
+                        <ul class="comments-list" id="comments-list-1"></ul>
+                    </div>
+                    <div class="comment-section">
+                        <div class="caption">
+                            <span class="boldy">Art 2</span><br>My love
+                        </div>
+                        <div class="comment-box">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button class="comment-button" onclick="addComment(this, 'comments-list-2')">Post</button>
+                        </div>
+                        <ul class="comments-list" id="comments-list-2"></ul>
+                    </div>
+                </div>
+                <div class="artwork-row">
+                    <div class="artwork-container">
+                        <div class="artwork">
+                            <img src="C:\Users\Justine\Documents\Cariman_PersonalWeb\photos\flowers.jpg" alt="Art 3">
+                            <div class="heart1" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                    <div class="artwork-container">
+                        <div class="artwork">
+                            <img src="C:\Users\Justine\Documents\Cariman_PersonalWeb\photos\lover.jpg" alt="Art 4">
+                            <div class="heart1" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-row">
+                    <div class="comment-section">
+                        <div class="caption">
+                            <span class="boldy">Art 3</span><br>Flowers for her
+                        </div>
+                        <div class="comment-box">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button class="comment-button" onclick="addComment(this, 'comments-list-3')">Post</button>
+                        </div>
+                        <ul class="comments-list" id="comments-list-3"></ul>
+                    </div>
+                    <div class="comment-section">
+                        <div class="caption">
+                            <span class="boldy">Art 4</span><br>Us
+                        </div>
+                        <div class="comment-box">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button class="comment-button" onclick="addComment(this, 'comments-list-4')">Post</button>
+                        </div>
+                        <ul class="comments-list" id="comments-list-4"></ul>
+                    </div>
+                </div>
+                <div class="artwork-row">
+                    <div class="artwork-container">
+                        <div class="artwork">
+                            <img src="C:\Users\Justine\Documents\Cariman_PersonalWeb\photos\manggunahay.jpg" alt="Art 5">
+                            <div class="heart1" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                    <div class="artwork-container">
+                        <div class="artwork">
+                            <img src="C:\Users\Justine\Documents\Cariman_PersonalWeb\photos\bayots.jpg" alt="Art 6">
+                            <div class="heart1" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-row">
+                    <div class="comment-section">
+                        <div class="caption">
+                            <span class="boldy">Art 5</span><br>COF
+                        </div>
+                        <div class="comment-box">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button class="comment-button" onclick="addComment(this, 'comments-list-5')">Post</button>
+                        </div>
+                        <ul class="comments-list" id="comments-list-5"></ul>
+                    </div>
+                    <div class="comment-section">
+                        <div class="caption">
+                            <span class="boldy">Art 6</span><br>Buddies
+                        </div>
+                        <div class="comment-box">
+                            <input type="text" class="comment-input" placeholder="Add a comment...">
+                            <button class="comment-button" onclick="addComment(this, 'comments-list-6')">Post</button>
+                        </div>
+                        <ul class="comments-list" id="comments-list-6"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="combined.js"></script>
+</body>
+</html>
